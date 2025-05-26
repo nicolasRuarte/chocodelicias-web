@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BirdsOfParadise";
+    src: url("birds-of-paradise.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BirdsOfParadise";
+    src: url("birds-of-paradise.ttf") format("truetype");
+    font-weight: bold;
+}
+
+
+.center-x {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: hsl(0, 7%, 86%);
+    margin: 0;
+    padding: 0;  
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    top: 0;
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#titulo-pagina {
+    font-family: "BirdsOfParadise", Arial, sans-serif;
+    font-size: 2.5rem;
+    color: black;
+    z-index: 100;
+
+    position: fixed;
+    top: -6.5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* inicio */
+#inicio {
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#inicio #fondo-galletas {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#presentacion {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 50%;
+}
+
+#marco {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: scale(1.2);
+}
+
+#texto-inicio {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50);
+    background-color: hsl(0 0% 0% / 70%);
+    width: auto;
+    padding: 4rem 0;
+    margin: 0;
+    border-radius: 10px;
+
+    font-family: "BirdsOfParadise", Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+/* Descripción */
+#descripcion {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2rem 2rem;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+
+    box-shadow: 0 0 2px hsl(0, 0%, 90%);
+    z-index: 10;
+}
+
+#descripcion .texto > p {
+    font-size: 1.5rem;
+    width: 45ch;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    line-height: 1.2;
+}
+
+
+#descripcion ul {
+    padding: 0 0 0 1rem;
+}
+
+#descripcion li {
+    font-size: 1.5rem;
+    width: 45ch;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    line-height: 1.5;
+}
+
+#descripcion img {
+    height: auto;
+    width: 55%;
+}
+
+#carrusel {
+    background-color:hsl(0, 0%, 97%);
+}
+
+#video {
+    background-color: hsl(0, 0%, 100%);
+    padding: 4rem 0;
+}
+
+#video .titulo2 {
+    margin: 0 0 2rem 0;
+
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-size: 3rem;
+}
+
+/* Spans */
+span.bold {
+    font-weight: bold;
+}
+
+span.enfasis {
+    color: yellow;
+    font-size: 4rem;
+}
+
+span.titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Animaciones */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+}
+.aparecer {
+    transition: all 1.5s ease;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Carrusel con solo CSS */
+.container {
+    padding: 2rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: .5rem;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+.slider > img {
+     flex: 1 0 100%;
+     scroll-snap-align: start;
+     object-fit: cover;
+ }
+
+.slider-nav {
+     display: flex;
+     justify-content: center;
+     column-gap: 1rem;
+     position: relative;
+     bottom: 1.25rem;
+     top: 0%;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 1;
+ }
+
+.slider-nav > a{
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity 250ms ease;
+ }
+
+.slider.nav.a:hover {
+    opacity: 1;
+ }
