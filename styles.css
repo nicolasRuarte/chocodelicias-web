@@ -149,6 +149,18 @@ nav {
     font-size: 3rem;
 }
 
+#pedidos {
+    background-color: hsl(0, 0%, 97%);
+    display: flex;
+    justify-content: center;
+}
+
+#realizar-pedido {
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
 /* Spans */
 span.bold {
     font-weight: bold;

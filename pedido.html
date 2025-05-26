@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="pedido.css">
+    <title>Hacer pedido</title>
+</head>
+<body>
+    <nav>
+        <p id="titulo-pagina">Chocodelicias</p>
+    </nav>
+
+    <div class="container">
+        <form action="pedido-realizado.html" method="GET">
+            <h1>Realiza tu pedido</h1>
+
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" name="direccion" required>
+
+            <label for="pedido">Pedido:</label>
+            <select name="pedido" required>
+                <option value="chips">Galletas con chips</option>
+                <option value="glaseadas">Galletas glaseadas</option>
+                <option value="relleno-chocolate">Galletas con relleno de chocolate</option>
+                <option value="relleno-frutilla">Galletas con relleno de frutilla</option>
+                <option value="confitadas">Galletas confitadas</option>
+            </select>
+
+            <div>
+                <input id="enviar" type="submit" name="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
