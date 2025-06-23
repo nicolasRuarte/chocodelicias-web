@@ -1,9 +1,31 @@
-* {
-    box-sizing: border-box;
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    --alternate-bg-color: hsl(0, 0%, 97%);
+    --font-color: hsl(0, 0%, 0%);
+    --cursive-font: "BirdsOfParadise";
+    --cursive-font-color: hsl(0, 0%, 100%);
+    --color-transition: all 1s;
 }
 
+.dark-mode {
+    --bg-color: hsl(0, 0%, 3%);
+    --alternate-bg-color: hsl(0, 0%, 0%);
+    --font-color: hsl(0, 0%, 100%);
+    --cursive-font-color: hsl(0, 0, 100%);
+    transition: var(--color-transition);
+}
+
+.white-mode {
+    --bg-color: hsl(0, 0%, 100%);
+    --alternate-bg-color: hsl(0, 0%, 97%);
+    --font-color: hsl(0, 0%, 0%);
+    --cursive-font-color: hsl(0, 0%, 100%);
+    transition: var(--color-transition);
+}
+
+
 @font-face {
-    font-family: "BirdsOfParadise";
+    font-family: "BirdsfOfParadise";
     src: url("birds-of-paradise.ttf") format("truetype");
 }
 
@@ -13,47 +35,53 @@
     font-weight: bold;
 }
 
+* {
+    box-sizing: border-box;
+    font-family: "BirdsOfParadise";
+}
 
+/* Utility */
 .center-x {
     display: flex;
     justify-content: center;
 }
 
+/* Relevant CSS */
 body {
-    background-color: hsl(0, 7%, 86%);
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;  
     overflow-x: hidden;
 }
 
+/* NAV CODE */
 nav {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--bg-color);
     position: fixed;
     top: 0;
     height: 7%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 100;
 }
 
-#titulo-pagina {
-    font-family: "BirdsOfParadise", Arial, sans-serif;
-    font-size: 2.5rem;
-    color: black;
-    z-index: 100;
+#dark-mode-btn {
+    font-size: 1.1rem;
+}
 
-    position: fixed;
-    top: -6.5%;
-    left: 50%;
-    transform: translate(-50%, 0);
+#titulo-pagina {
+    font-family: var(--cursive-font), Arial, sans-serif;
+    font-size: 2.5rem;
+    color: var(--font-color);
+    z-index: 100;
 }
 
 /* inicio */
 #inicio {
     padding: 0;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--bg-color);
 }
 
 #inicio #fondo-galletas {
@@ -62,35 +90,26 @@ nav {
     width: 100%;
 }
 
-#presentacion {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20%;
-    height: 50%;
-}
-
 #marco {
     position: absolute;
-    top: -10%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 20%;
+    left: 34%;
     transform: scale(1.2);
 }
 
 #texto-inicio {
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 17%;
+    left: 34%;
     transform: translateX(-50);
     background-color: hsl(0 0% 0% / 70%);
-    width: auto;
-    padding: 4rem 0;
+    width: 32.5%;
+    height: 95%;
+    padding: 5rem 0;
     margin: 0;
     border-radius: 10px;
 
-    font-family: "BirdsOfParadise", Arial, sans-serif;
+    font-family: var(--cursive-font), Arial, sans-serif;
     font-size: 2rem;
     text-align: center;
     color: white;
@@ -102,11 +121,12 @@ nav {
     justify-content: left;
     align-items: center;
     padding: 2rem 2rem;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--bg-color);
     position: relative;
 
     box-shadow: 0 0 2px hsl(0, 0%, 90%);
     z-index: 10;
+    color: var(--font-color);
 }
 
 #descripcion .texto > p {
@@ -114,6 +134,7 @@ nav {
     width: 45ch;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     line-height: 1.2;
+    color: var(--font-color);
 }
 
 
@@ -121,7 +142,7 @@ nav {
     padding: 0 0 0 1rem;
 }
 
-#descripcion li {
+li {
     font-size: 1.5rem;
     width: 45ch;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
@@ -134,23 +155,24 @@ nav {
 }
 
 #carrusel {
-    background-color:hsl(0, 0%, 97%);
+    background-color: var(--alternate-bg-color)
 }
 
 #video {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--bg-color);
     padding: 4rem 0;
 }
 
-#video .titulo2 {
+.titulo2 {
     margin: 0 0 2rem 0;
 
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     font-size: 3rem;
+    color: var(--font-color);
 }
 
 #pedidos {
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--alternate-bg-color);
     display: flex;
     justify-content: center;
 }
@@ -159,6 +181,7 @@ nav {
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     font-size: 3rem;
     font-weight: 600;
+    color: var(--font-color);
 }
 
 /* Spans */
@@ -174,6 +197,10 @@ span.enfasis {
 span.titulo {
     font-size: 2.5rem;
     font-weight: bold;
+}
+
+span.texto {
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 /* Animaciones */
@@ -216,21 +243,21 @@ span.titulo {
 
 
 .slider > img {
-     flex: 1 0 100%;
-     scroll-snap-align: start;
-     object-fit: cover;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
  }
 
 .slider-nav {
-     display: flex;
-     justify-content: center;
-     column-gap: 1rem;
-     position: relative;
-     bottom: 1.25rem;
-     top: 0%;
-     left: 50%;
-     transform: translateX(-50%);
-     z-index: 1;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    position: relative;
+    bottom: 1.25rem;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
  }
 
 .slider-nav > a{

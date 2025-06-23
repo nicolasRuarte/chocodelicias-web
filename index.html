@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,22 +10,30 @@
     <title>Chocodelicias</title>
 </head>
 <body>
-    <nav>
-        <p id="titulo-pagina">Chocodelicias</p>
+    <nav class="white-mode">
+        <p id="titulo-pagina" class="white-mode">Chocodelicias</p>
+        <button id="dark-mode-btn" class="white-mode">Cambiar tema</button>
     </nav>
 
-    <img id="marco" class="hidden" src="marco.png" draggable="false">
-    <pre id="texto-inicio" class="hidden">
+    <pre id="texto-inicio" class="hidden white-mode">
 Bienvenido a Chocodelicias!
+
 Donde la magia y el sabor 
 son indistintos
+
+Consigue las mejores galletitas
+en toda la ciudad
+
+Para más información
+sigue bajando
     </pre>
-    <div id="inicio">
+    <img id="marco" class="hidden white-mode" src="marco.png" draggable="false">
+    <div id="inicio" class="white-mode">
         <img id="fondo-galletas" src="cookie-bg.webp" draggable="false">
     </div>
 
 
-    <div id="descripcion">
+    <div id="descripcion" class="white-mode">
         <div class="texto">
             <p class="hidden">
             En Chocodelicias<sup>TM</sup> nos encargamos de ofrecer la mejor de las calidades al mejor de los
@@ -52,7 +60,7 @@ son indistintos
         <img class="hidden" src="galleta-ia.jpg.jpg" alt="monton galletas" draggable="false">
     </div>
 
-    <section id="carrusel">
+    <section id="carrusel" class="white-mode">
         <div class="container">
             <div class="slider-wrapper">
                 <div class="slider">
@@ -72,7 +80,7 @@ son indistintos
     </section>
         
     
-    <section id="video">
+    <section id="video" class="white-mode">
         <div class="center-x">
             <h2 class="titulo2 hidden">¡Conoce nuestro proceso de creación!</h2>
         </div>
@@ -82,8 +90,8 @@ son indistintos
         </div>
     </section>
 
-    <section id="pedidos">
-        <p id="realizar-pedido">¿Qué esperás? Hacé tu pedido <a href="./pedido.html">aquí</a></p>
+    <section id="pedidos" class="white-mode">
+        <p id="realizar-pedido" class="hidden">¿Qué esperás? Hacé tu pedido <a href="./pedido.html">aquí</a> o <a href="compra.html">acá</a></p>
     </section>
 </body>
 </html>

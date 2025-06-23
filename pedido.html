@@ -5,28 +5,30 @@
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="pedido.css">
+    <script src="script.js" defer></script>
     <title>Hacer pedido</title>
 </head>
 <body>
-    <nav>
-        <p id="titulo-pagina">Chocodelicias</p>
+    <nav class="white-mode">
+        <p id="titulo-pagina" class="white-mode">Chocodelicias</p>
+        <button id="dark-mode-btn" class="white-mode">Cambiar tema</button>
     </nav>
 
-    <div class="container">
+    <div class="container white-mode">
         <form action="pedido-realizado.html" method="GET">
-            <h1>Realiza tu pedido</h1>
+            <h1 class="white-mode">Realiza tu pedido</h1>
 
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" name="nombre" required>
+            <label for="nombre" class="white-mode">Nombre completo:</label>
+            <input type="text" name="nombre" class="white-mode" required>
 
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" required>
+            <label for="apellido" class="white-mode">Apellido:</label>
+            <input type="text" name="apellido" class="white-mode" required>
 
-            <label for="direccion">Dirección:</label>
-            <input type="text" name="direccion" required>
+            <label for="direccion" class="white-mode">Dirección:</label>
+            <input type="text" name="direccion" class="white-mode" required>
 
-            <label for="pedido">Pedido:</label>
-            <select name="pedido" required>
+            <label for="pedido" class="white-mode">Pedido:</label>
+            <select name="pedido" class="white-mode" required>
                 <option value="chips">Galletas con chips</option>
                 <option value="glaseadas">Galletas glaseadas</option>
                 <option value="relleno-chocolate">Galletas con relleno de chocolate</option>
@@ -34,9 +36,7 @@
                 <option value="confitadas">Galletas confitadas</option>
             </select>
 
-            <div>
-                <input id="enviar" type="submit" name="submit" value="Enviar">
-            </div>
+            <input id="enviar" type="submit" name="submit" class="white-mode" value="Enviar">
         </form>
     </div>
 </body>

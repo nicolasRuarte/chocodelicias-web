@@ -10,3 +10,29 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+const darkModeButton = document.querySelector("#dark-mode-btn");
+let toggleDarkMode = false;
+darkModeButton.addEventListener("mousedown", () => {
+    console.log("click");
+    console.log(toggleDarkMode);
+    if (!toggleDarkMode) {
+        const whiteModeElements = document.querySelectorAll(".white-mode");
+
+        for(element of whiteModeElements) {
+            element.classList.remove("white-mode");
+            element.classList.add("dark-mode");
+        }
+
+        toggleDarkMode = true;
+    } else {
+        const darkModeElements = document.querySelectorAll(".dark-mode");
+
+        for(element of darkModeElements) {
+            element.classList.remove("dark-mode");
+            element.classList.add("white-mode");
+        }
+        
+        toggleDarkMode = false;
+    }
+});
