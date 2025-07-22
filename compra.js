@@ -2,14 +2,30 @@ const buyButtons = document.querySelectorAll("buy");
 const addToCartButtons = document.querySelectorAll("add-to-cart");
 
 const products = document.querySelectorAll(".product");
-const cartList = document.querySelector("cart-list");
+const cartList = document.querySelector("#cart-list");
 
-console.log(document.querySelector(".product"))
+function addCartElement() {
+    const total = document.querySelector("#total");
+    let totalAmount = parseInt(total.textContent);
+    totalAmount += parseInt(product.childNodes[5].textContent);
+    total.textContent = totalAmount;
 
-for (const product of products) {
+    const cartElement = document.createElement("li");
+    const cartElementText = document.createTextNode(`${product.childNodes[pTypeIndex].textContent} ${product.childNodes[pPriceIndex].textContent}`)
+    cartElement.appendChild(cartElementText);
+
+    cartList.appendChild(cartElement);
+}
+
+for (product of products) {
+    const pTypeIndex = 3;
+    const pPriceIndex = 5;
+    console.log(product.childNodes)
     product.addEventListener("click", (e) => {
-        if(e.target.classList.includes("add-to-cart")) {
-            console.log(product.childNodes())
+        const target = e.target;
+
+        if (target.className === "add-to-cart") {
+            addCartElement();
         }
-    })
+    });
 }
