@@ -5,6 +5,9 @@ const products = document.querySelectorAll(".product");
 const cartList = document.querySelector("#cart-list");
 
 function addCartElement() {
+    const pTypeIndex = 3;
+    const pPriceIndex = 5;
+
     const total = document.querySelector("#total");
     let totalAmount = parseInt(total.textContent);
     totalAmount += parseInt(product.childNodes[5].textContent);
@@ -18,9 +21,6 @@ function addCartElement() {
 }
 
 for (product of products) {
-    const pTypeIndex = 3;
-    const pPriceIndex = 5;
-    console.log(product.childNodes)
     product.addEventListener("click", (e) => {
         const target = e.target;
 
