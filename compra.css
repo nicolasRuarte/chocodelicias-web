@@ -1,16 +1,41 @@
-@font-face {
-    font-family: "BirdsfOfParadise";
-    src: url("birds-of-paradise.ttf") format("truetype");
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    --alternate-bg-color: hsl(0, 0%, 97%);
+    --font-color: hsl(0, 0%, 0%);
+    --cursive-font: "BirdsOfParadise";
+    --cursive-font-color: hsl(0, 0%, 100%);
+    --color-transition: all 1s;
 }
 
-@font-face {
-    font-family: "BirdsOfParadise";
-    src: url("birds-of-paradise.ttf") format("truetype");
-    font-weight: bold;
+.dark-mode {
+    --bg-color: hsl(0, 0%, 3%);
+    --alternate-bg-color: hsl(0, 0%, 0%);
+    --font-color: hsl(0, 0%, 100%);
+    --cursive-font-color: hsl(0, 0, 100%);
+    transition: var(--color-transition);
+}
+
+.white-mode {
+    --bg-color: hsl(0, 0%, 100%);
+    --alternate-bg-color: hsl(0, 0%, 97%);
+    --font-color: hsl(0, 0%, 0%);
+    --cursive-font-color: hsl(0, 0%, 100%);
+    transition: var(--color-transition);
 }
 
 * {
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BirdsfOfParadise";
+    src: url("fuentes/birds-of-paradise.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BirdsOfParadise";
+    src: url("fuentes/birds-of-paradise.ttf") format("truetype");
+    font-weight: bold;
 }
 
 body {
@@ -57,9 +82,9 @@ nav {
     grid-auto-flow: row;
     grid-gap: 1rem;
 
-    background-color: red;
-    width: 80%;
-    padding: 1rem;
+    background-color: hsl(200, 60%, 50%);
+    width: 100%;
+    padding: 3rem;
 }
 
 .product-list .preview-img {
@@ -68,4 +93,20 @@ nav {
 
 .carrito {
     display: block;
+}
+
+.display-total {
+    display: inline;
+}
+
+.product {
+    background-color: var(--bg-color);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.product .add-to-cart {
+    height: 2rem;
+    font-weight: 900;
 }

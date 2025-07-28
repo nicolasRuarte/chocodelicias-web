@@ -31,19 +31,19 @@
 body {
     margin: 5rem 0;
     padding: 0;
-    background-image: url("./cookies-fondo-amarillo.jpg");
+    background-image: url("imagenes/cookies-fondo-amarillo.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 @font-face {
     font-family: "BirdsOfParadise";
-    src: url("birds-of-paradise.ttf") format("truetype");
+    src: url("fuentes/birds-of-paradise.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "BirdsOfParadise";
-    src: url("birds-of-paradise.ttf") format("truetype");
+    src: url("imagenes/birds-of-paradise.ttf") format("truetype");
     font-weight: bold;
 }
 
