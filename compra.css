@@ -47,6 +47,7 @@ body {
 
 nav {
     background-color: var(--bg-color);
+    color: var(--font-color);
     font-family: "BirdsOfParadise";
     position: fixed;
     top: 0;
@@ -80,7 +81,7 @@ nav {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row;
-    grid-gap: 1rem;
+    grid-gap: .5rem;
 
     background-color: hsl(200, 60%, 50%);
     width: 100%;
@@ -92,7 +93,10 @@ nav {
 }
 
 .carrito {
+    width: 100%;
     display: block;
+    padding-left: 3rem;
+    background-color: var(--bg-color);
 }
 
 .display-total {
@@ -102,11 +106,65 @@ nav {
 .product {
     background-color: var(--bg-color);
     border: 1px solid black;
-    border-radius: 20px;
-    padding: 2rem;
+    border-radius: 5px;
+}
+
+.product .preview-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-info {
+    padding: 0;
+}
+
+.product .product-info .type {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.product .product-info .price {
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 .product .add-to-cart {
     height: 2rem;
     font-weight: 900;
+}
+
+#buy {
+    background-color: hsl(220, 80%, 55%);
+    color: white;
+
+    font-weight: 900;
+    letter-spacing: .3ch;
+    font-size: 1.5rem;
+    text-align: center;
+
+    border: none;
+    border-radius: 10px;
+    width: auto;
+    padding: .5rem 1rem;
+
+    transition: background-color 250ms;
+}
+
+#buy:hover {
+    background-color: hsl(220, 100%, 75%);
+}
+
+#buy:active {
+    background-color: hsl(220, 100%, 35%);
+}
+.display-total {
+    background-color: var(--bg-color);
+    display: block;
+    padding: 1rem 0;
+}
+.display-total #total-text-part {
+    display: inline;
+}
+.display-total #total {
+    display: inline;
 }
