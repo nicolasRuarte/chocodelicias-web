@@ -55,15 +55,18 @@ body {
 nav {
     background-color: var(--bg-color);
     color: var(--font-color);
+    border-bottom: 2px solid var(--font-color);
     font-family: "BirdsOfParadise";
+
     position: fixed;
-    top: 0;
-    height: 7%;
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    top: 0;
     z-index: 100;
+
+    height: 7%;
+    width: 100%;
 }
 
 #dark-mode-btn {
@@ -88,15 +91,11 @@ nav {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row;
-    grid-gap: .5rem;
+    grid-gap: 2rem 1rem;
 
-    background-color: hsl(200, 60%, 50%);
+    background-color: var(--bg-color);
     width: 100%;
     padding: 3rem;
-}
-
-.product-list .preview-img {
-    width: 10%
 }
 
 .carrito {
@@ -112,8 +111,10 @@ nav {
 
 .product {
     background-color: var(--bg-color);
-    border: 1px solid black;
+    border: 1px solid var(--font-color);
     border-radius: var(--product-and-image-border-radius);
+    color: var(-font-color);
+    color: var(-font-color);
 }
 
 .product .preview-img {
@@ -122,29 +123,39 @@ nav {
 }
 
 .product-info {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .product .product-info .type {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 900;
     text-align: center;
     margin: 0;
+    color: var(--font-color);
 }
 
 .product .product-info .price {
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 500;
     text-align: center;
     margin: 0;
+    padding: 1rem;
+    color: var(--font-color);
 }
 
-.product .add-to-cart {
-    height: 2rem;
+.add-to-cart {
+    font-size: 1.5rem;
     font-weight: 900;
-    margin: 0 0 2rem 0;
+    background-color: hsl(220, 80%, 55%);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    padding: .5rem;
 }
 
 #buy {
@@ -191,6 +202,8 @@ footer {
     width: 100%;
     padding: 3rem;
     border-top: 3px solid hsl(0, 0%, 90%);
+
+    background-color: var(--bg-color);
 }
 
 footer .container {
@@ -202,7 +215,7 @@ footer .container {
 .copyright {
     font-size: 1.1rem;
     text-decoration: underline;
-    color: hsl(0, 0% 60%);
+    color: var(--font-color);
 
     text-align: center;
     display: flex;
@@ -215,15 +228,17 @@ footer .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--font-color);
 }
-
 
 .socials {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-footer .socials svg {
+
+.socials svg {
     scale: 1.5;
     margin: 0 1.5rem;
+    color: var(--font-color);
 }
