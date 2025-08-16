@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles.css">    
-    <script src="script.js" defer></script>
-    <title>Chocodelicias</title>
-</head>
-<body>
-    <nav class="white-mode">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="index.css">    
+        <script type="module" src="index.js" defer></script>
+        <title>Chocodelicias</title>
+    </head>
+    <body>
+        <nav class="white-mode">
         <p id="titulo-pagina" class="white-mode">Chocodelicias</p>
-        <button id="dark-mode-btn" class="white-mode">Cambiar tema</button>
-    </nav>
+        <button id="dark-mode-btn" class="white-mode cursive">Cambiar tema</button>
+        </nav>
 
-    <pre id="texto-inicio" class="hidden white-mode">
-Bienvenido a Chocodelicias!
+        <main>
+            <div id="inicio" class="white-mode">
+                <img id="fondo-galletas" src="imagenes/cookie-bg.webp" draggable="false">
+            </div>
 
-Donde la magia y el sabor 
-son indistintos
-
-Consigue las mejores galletitas
-en toda la ciudad
-
-Para más información
-sigue bajando
-    </pre>
-    <img id="marco" class="hidden white-mode" src="marco.png" draggable="false">
-    <div id="inicio" class="white-mode">
-        <img id="fondo-galletas" src="cookie-bg.webp" draggable="false">
-    </div>
-
-
-    <div id="descripcion" class="white-mode">
-        <div class="texto">
-            <p class="hidden">
-            En Chocodelicias<sup>TM</sup> nos encargamos de ofrecer la mejor de las calidades al mejor de los
-            precios, intentando siempre mantener la compañía y cercanía que suelen ofrecer las industrias
-            argentinas.
-            </p>
-            <p class="hidden">
-            En Chocodelicias le damos vital importancia al cliente por lo que tendrá diversas facilidades
-            para simplificar la adquisición de nuestros productos. El cliente contará con:
-
-            <ul>
-                <li class="hidden">Personal capacitado para tomar sus órdenes</li>
-                <li class="hidden">Vehículos de delivery de último modelo</li>
-                <li class="hidden">Control de calidad antes de la entrega de cada pedido</li>
-            </ul>
-            </p>
-
-            <p class="hidden">
-            Usted podrá ser felizmente atendido en los siguientes horarios.
-            <p class="hidden"><span class="bold">Lunes a viernes: </span> 09:00 - 21:00hs</p>
-            <p class="hidden"><span class="bold">Sábados: </span> 09:00 - 18:00hs</p>
-        </div>
-
-        <img class="hidden" src="galleta-ia.jpg.jpg" alt="monton galletas" draggable="false">
-    </div>
-
-    <section id="carrusel" class="white-mode">
-        <div class="container">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img id="slide1" src="galleta-slide1.jpg" draggable="false">
-                    <img id="slide2" src="galleta-slide2.jpg" draggable="false">
-                    <img id="slide3" src="galleta-slide3.jpg" draggable="false">
-                    <img id="slide4" src="galleta-slide4.jpg" draggable="false">
+            <div class="landing">
+                <div id="marco-container">
+                    <div id="texto-inicio">
+                        <p>Chocodelicias, donde la magia y el sabor son indistintos</p>
+                        <p>En esta página podrás consultar toda la información necesaria para realizar tu compra de galletas cómodamente y en la menor cantidad de clicks</p>
+                        <p>Conseguí ofertas con el código de creador Pérez </p>
+                        <p>¡Disfruta de la navegación!</p>
+                    </div>
                 </div>
             </div>
-            <div class="slider-nav">
-                <a href="#slide1"></a>
-                <a href="#slide2"></a>
-                <a href="#slide3"></a>
-                <a href="#slide4"></a>
+
+            <div id="descripcion" class="white-mode">
+                <div class="texto">
+                    <p class="hidden">
+                    En Chocodelicias<sup>TM</sup> nos encargamos de ofrecer la mejor de las calidades al mejor de los
+                    precios, intentando siempre mantener la compañía y cercanía que suelen ofrecer las industrias
+                    argentinas.
+                    </p>
+                    <p class="hidden">
+                    En Chocodelicias le damos vital importancia al cliente por lo que tendrá diversas facilidades
+                    para simplificar la adquisición de nuestros productos. El cliente contará con:
+
+                    <ul>
+                        <li class="hidden">Personal capacitado para tomar sus órdenes</li>
+                        <li class="hidden">Vehículos de delivery de último modelo</li>
+                        <li class="hidden">Control de calidad antes de la entrega de cada pedido</li>
+                    </ul>
+                    </p>
+
+                    <p class="hidden">
+                    Usted podrá ser felizmente atendido en los siguientes horarios.
+                    <p class="hidden"><span class="bold">Lunes a viernes: </span> 09:00 - 21:00hs</p>
+                    <p class="hidden"><span class="bold">Sábados: </span> 09:00 - 18:00hs</p>
+                </div>
+
+                <img class="hidden" src="imagenes/galleta-ia.jpg.webp" alt="monton galletas" draggable="false">
             </div>
-        </div>
-    </section>
-        
-    
-    <section id="video" class="white-mode">
-        <div class="center-x">
-            <h2 class="titulo2 hidden">¡Conoce nuestro proceso de creación!</h2>
-        </div>
 
-        <div class="center-x">
-            <iframe  width="900" height="500" src="https://www.youtube.com/embed/FPfwV9YdOnw?mute=1"></iframe>
-        </div>
-    </section>
+            <section id="carrusel" class="white-mode">
+                <div class="container">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img id="slide1" src="imagenes/galleta-slide1.webp" draggable="false">
+                            <img id="slide2" src="imagenes/galleta-slide2.webp" draggable="false">
+                            <img id="slide3" src="imagenes/galleta-slide3.webp" draggable="false">
+                            <img id="slide4" src="imagenes/galleta-slide4.webp" draggable="false">
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide1"></a>
+                        <a href="#slide2"></a>
+                        <a href="#slide3"></a>
+                        <a href="#slide4"></a>
+                    </div>
+                </div>
+            </section>
 
-    <section id="pedidos" class="white-mode">
-        <p id="realizar-pedido" class="hidden">¿Qué esperás? Hacé tu pedido <a href="./pedido.html">aquí</a> o <a href="compra.html">acá</a></p>
-    </section>
-</body>
+
+            <section id="video" class="white-mode">
+                <div class="center-x">
+                    <h2 class="titulo2 hidden">¡Conoce nuestro proceso de creación!</h2>
+                </div>
+
+                <div class="center-x">
+                    <iframe  width="900" height="500" src="https://www.youtube.com/embed/FPfwV9YdOnw?mute=1"></iframe>
+                </div>
+            </section>
+
+            <section id="pedidos" class="white-mode">
+                <p id="realizar-pedido" class="hidden">¿Qué esperás? ¡Hacé tu pedido <a href="compra.html">acá!</a></p>
+            </section>
+        </main>
+
+        <a href="chatbot.html"><div class="enter-chatbot white-mode cursive">Chatbot</div></a>
+
+    </body>
 </html>

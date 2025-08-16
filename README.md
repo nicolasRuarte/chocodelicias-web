@@ -13,3 +13,9 @@ Consiste en una e-shop de venta de galletas
 - [ ] Agregar estilos a la sección de venta de productos 
 
 - [ ] Agregar estilos al chatbot
+
+- [ ] Probar si se puede hacer el tema ese de agregar elementos mediante funciones de Javascript, en lugar de andar copiando y pegando los elementos
+
+- [ ] O de última, investigar si uso React o no
+
+- [ ] Arreglar el marco de la página de inicio

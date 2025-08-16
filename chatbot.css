@@ -1,31 +1,134 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f0f0f0;
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    --alternate-bg-color: hsl(0, 0%, 97%);
+    --font-color: hsl(0, 0%, 0%);
+    --cursive-font: "BirdsOfParadise";
+    --cursive-font-color: hsl(0, 0%, 100%);
+    --color-transition: all 1s;
+}
+
+.dark-mode {
+    --bg-color: hsl(0, 0%, 3%);
+    --alternate-bg-color: hsl(0, 0%, 0%);
+    --font-color: hsl(0, 0%, 100%);
+    --cursive-font-color: hsl(0, 0, 100%);
+    transition: var(--color-transition);
+}
+
+.white-mode {
+    --bg-color: hsl(0, 0%, 100%);
+    --alternate-bg-color: hsl(0, 0%, 97%);
+    --font-color: hsl(0, 0%, 0%);
+    --cursive-font-color: hsl(0, 0%, 100%);
+    transition: var(--color-transition);
+}
+
+@font-face {
+    font-family: "BirdsfOfParadise";
+    src: url("fuentes/birds-of-paradise.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BirdsOfParadise";
+    src: url("fuentes/birds-of-paradise.ttf") format("truetype");
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cursive {
+    font-family: "BirdsfOfParadise";
+}
+.center-x {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding-top: 5rem;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid var(--font-color);
+}
+
+#dark-mode-btn {
+    font-size: 1.1rem;
+}
+
+#titulo-pagina {
+    margin: 0;
+    font-family: var(--cursive-font), Arial, sans-serif;
+    font-size: 2.5rem;
+    color: var(--font-color);
+    z-index: 100;
+    text-align: center;
 }
 
 .chat-container {
-    background-color: white;
+    background-color: var(--bg-color);
+    color: var(--font-color);
     border-radius: 10px;
-    padding: 20px;
-    width: 300px;
+    border: 1px solid var(--font-color);
+    padding: 2rem;
+    margin: 2rem 0;
+    width: 60%;
+    height: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-box {
-    height: 200px;
     overflow-y: auto;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 10px;
+    height: 70%;
+    border: 1px solid var(--font-color);
+    margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
 .user {
-    color: blue;
+    color: hsl(15, 100%, 65%);
 }
 
 .bot {
-    color: green;
+    color: hsl(15, 50%, 20%);
 }
+
+input {
+    width: 80%;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--font-color);
+    background-color: var(--bg-color);
+    padding: 1rem;
+}
+
+#send {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 999px;
+    font-weight: 900;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--font-color);
+}
+
